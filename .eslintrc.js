@@ -1,11 +1,23 @@
 module.exports = {
+	"parser": "babel-eslint",
     "env": {
-        "browser": true
+        "browser": true,
+        "es6": true
     },
-    "extends": "eslint:recommended",
-    "parserOptions": {
-        "ecmaVersion": 5
-    },
+	"plugins": [
+		"react"
+	],
+    "extends": [
+		"eslint:recommended",
+		"plugin:react/recommended"
+	],
+	"parserOptions": {
+		"ecmaVersion": 6,
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"modules": true
+		}
+	},
     "rules": {
         "indent": [
             "error",
