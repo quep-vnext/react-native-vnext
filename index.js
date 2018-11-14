@@ -6,19 +6,15 @@
 //
 // AppRegistry.registerComponent(appName, () => App);
 
-import React from 'react';
-import { Text, AppRegistry } from 'react-native';
-import {name as appName} from './app.json';
-import Header from './src/components/header';
+import React from 'react'
+import {Text, AppRegistry} from 'react-native'
+import {name as appName} from './app.json'
 
+import Header from './src/components/header'
 
 const App = () => {
-    return (
-        <Header />
-    );
-};
-
-AppRegistry.registerComponent(appName, () => App);
-
-
-
+	return (
+		<Header></Header>
+	)
+}
+AppRegistry.registerComponent(appName, () => App)

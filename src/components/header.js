@@ -1,21 +1,35 @@
-import React from 'react';
-import { Text, View } from 'react-native';
+/** @format */
+import React from 'react'
+import { Text, View } from 'react-native'
 
 const Header = () => {
-    const { textStyle } = styles
-    return (
-        <View>
-            <Text style={ textStyle }>Album! Hello!!!!</Text>
-        </View>
-    );
-};
-
-console.log('hello world');
+	const {textStyle, viewStyle} = styles
+	return (
+		<View style={viewStyle}>
+			<Text style={textStyle}>Photo !!</Text>
+		</View>
+	)
+}
 
 const styles = {
-    textStyle: {
-        fontSize: 20
-    }
-};
+	viewStyle: {
+		backgroundColor: '#F8F8F8',
+		alignItems: 'center',
+		justifyContent: 'center',
+		height: 60,
+		paddingTop: 15,
+		shadowColor: '#000000',
+		shadowOffset: {
+			width: 0,
+			height: 2
+		},
+		shadowOpacity: 0.5,
+		elevation: 20,
+		position: 'relative'
+	},
+	textStyle: {
+		fontSize: 20
+	}
+}
 
 export default Header
