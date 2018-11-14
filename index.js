@@ -14,7 +14,7 @@ import Header from './src/components/header'
 
 const App = () => {
 	return (
-		<Header></Header>
+		<Header textHeader={'Albums!!!'}></Header>
 	)
 }
 AppRegistry.registerComponent(appName, () => App)
