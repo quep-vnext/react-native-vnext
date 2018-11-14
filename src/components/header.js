@@ -1,15 +1,21 @@
 import React from 'react';
-import { Text, AppRegistry } from 'react-native';
+import { Text, View } from 'react-native';
 
 const Header = () => {
     const { textStyle } = styles
-    return <Text style={ textStyle }>Album!</Text>;
+    return (
+        <View>
+            <Text style={ textStyle }>Album! Hello!!!!</Text>
+        </View>
+    );
 };
+
+console.log('hello world');
 
 const styles = {
     textStyle: {
         fontSize: 20
     }
-}
+};
 
 export default Header
