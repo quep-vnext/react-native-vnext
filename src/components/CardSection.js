@@ -2,7 +2,6 @@ import React from 'react'
 import {View} from 'react-native'
 
 const CardSection = (props) => {
-    console.log('Hello world');
     return (
         <View style={style.containerStyle}>
             {props.children}

@@ -19,6 +19,7 @@ class AlbumList extends Component{
     }
 
     renderAlbums() {
+        console.log(this.state);
         return (
             this.state.albums.map(
                 (album, index) => {
