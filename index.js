@@ -16,7 +16,7 @@ import AlbumList from './src/components/AlbumList'
 const App = () => {
 	return (
 		<View>
-            <Header textHeader={'Albums List!!!'} />
+            <Header textHeader={'Albums List'} />
 			<AlbumList />
 		</View>
 	)
