@@ -14,3 +14,6 @@ Development Junior 1
 
 Development Senior
 Development Senior 1
+
+Kaihatsu Branch
+Kaihatsu Branch 1
