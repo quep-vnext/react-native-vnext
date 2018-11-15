@@ -3,19 +3,21 @@ import {View, Text, Image} from 'react-native'
 import Card from "./Card";
 import CardSection from "./CardSection";
 
-const AlbumDetail = (props) => {
+const AlbumDetail = ({album}) => {
+    const {title, artist, thumbnail_image} = album
+    const {thumnailStyle, headerContentStyle} = styles
     return (
         <Card>
             <CardSection>
                 <View>
                     <Image
-                        style={styles.thumnailStyle}
-                        source={{uri: props.album.thumbnail_image}}
+                        style={thumnailStyle}
+                        source={{uri: thumbnail_image}}
                     />
                 </View>
-                <View>
-                    <Text>{props.album.title}</Text>
-                    <Text>{props.album.artist}</Text>
+                <View style={headerContentStyle}>
+                    <Text>{title}</Text>
+                    <Text>{artist}</Text>
                 </View>
             </CardSection>
         </Card>
