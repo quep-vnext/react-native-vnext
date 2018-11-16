@@ -16,6 +16,9 @@ const styles = {
         borderRadius: 4,
         borderWidth: 0.5,
         borderColor: '#d6d7da',
+        flex: 1,
+        alignSelf: 'stretch',
+        backgroundColor: '#fff'
     }
 }
 
