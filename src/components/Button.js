@@ -4,7 +4,7 @@ import {Text} from  'react-native'
 const Button = () =>  {
     return (
         <Text>
-            Click Me!!!
+            Click Me Up!!!
         </Text>
     )
 }
