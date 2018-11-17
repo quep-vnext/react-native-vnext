@@ -1,8 +1,9 @@
 import React from 'react'
-import {View, Text, Image} from 'react-native'
+import { View, Text, Image } from 'react-native'
 import Card from "./Card";
 import CardSection from "./CardSection";
 import Button from "./Button";
+import ButtonClick from './ButtonClick'
 
 const AlbumDetail = ({album}) => {
     const {title, artist, thumbnail_image, image} = album
@@ -27,10 +28,8 @@ const AlbumDetail = ({album}) => {
             </CardSection>
 
             <CardSection>
-                <Button />
+                <ButtonClick />
             </CardSection>
-
-            
         </Card>
     )
 }
