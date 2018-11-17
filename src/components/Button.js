@@ -1,26 +1,50 @@
 import React from 'react'
-import {Text, TouchableOpacity} from 'react-native'
+import {View, Text, TouchableOpacity} from 'react-native'
+import styled from 'styled-components/native'
 
 const Button = () => {
     return (
-        <TouchableOpacity style={styles.clickButtonStyle}>
-            <Text>
-                Click Me Up!!!!!
-            </Text>
-        </TouchableOpacity>
+        <TextView>
+            <TextButton>
+                Click Me Up!!!
+            </TextButton>
+
+            <ModifiedButton backgroundColor={"red"}>
+                Click Me Down!!!!
+            </ModifiedButton>
+
+            <ModifiedButton>
+                Click me on No Color!!!!
+            </ModifiedButton>
+
+            <TouchableOpacityButton>
+                <Text>
+                    TouchableOpacity!!!
+                </Text>
+            </TouchableOpacityButton>
+        </TextView>
     )
 }
 
-const styles = {
-    clickButtonStyle: {
-        borderRadius: 4,
-        borderWidth: 0.5,
-        borderColor: '#d6d7da',
-        flex: 1,
-        alignSelf: 'stretch',
-        backgroundColor: '#fff'
-    }
-}
+const TouchableOpacityButton = styled.TouchableOpacity`
+        display: none;
+    `
 
+const TextView = styled.View`
+        background-color: gray;
+    `
+
+const TextButton = styled.Text`
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+        background-color: green;
+        text-align:center;
+        font-size: 10px;
+    `
+
+const ModifiedButton = styled(TextButton)`
+        background-color: ${props => props.backgroundColor ? props.backgroundColor : "gray"};
+        font-size: 20px;
+  `
 export default Button
-

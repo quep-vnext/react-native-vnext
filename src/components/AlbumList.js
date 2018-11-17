@@ -29,9 +29,10 @@ class AlbumList extends Component{
         )
     }
 
+    
     render() {
         return (
-            <ScrollView>
+            <ScrollView showsVerticalScrollIndicator={false}>
                 { this.renderAlbums() }
             </ScrollView>
         )

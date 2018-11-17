@@ -1,5 +1,5 @@
 import React from 'react'
-import {View} from 'react-native'
+import {View, Text} from 'react-native'
 
 const Card = (props) => {
     return (
@@ -22,7 +22,7 @@ const styles = {
         elevation: 1,
         marginLeft: 5,
         marginRight: 5,
-        marginTop: 10
+        marginTop: 10,
     }
 }
 
