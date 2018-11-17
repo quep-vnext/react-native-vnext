@@ -86,4 +86,4 @@ const ModifiedButton = styled(TextButton)`
         background-color: ${props => props.backgroundColor ? props.backgroundColor : "gray"};
         font-size: 20px;
   `
-export default Button
+export {Button}

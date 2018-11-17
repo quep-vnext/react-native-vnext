@@ -33,4 +33,4 @@ const styles = {
 	}
 }
 
-export default ButtonClick
+export {ButtonClick}
