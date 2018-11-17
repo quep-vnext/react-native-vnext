@@ -28,7 +28,9 @@ const AlbumDetail = ({album}) => {
             </CardSection>
 
             <CardSection>
-                <ButtonClick onPressF={() => {console.log(url); return Linking.openURL(url);} } />
+                <ButtonClick onPressF={() => {console.log(url); return Linking.openURL(url);} }>
+                    Buy Now
+                </ButtonClick>
             </CardSection>
         </Card>
     )
