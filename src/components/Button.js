@@ -1,8 +1,14 @@
 import React from 'react'
-import {View, Text, TouchableOpacity} from 'react-native'
+import {View, Text, TouchableOpacity, Dimensions} from 'react-native'
 import styled from 'styled-components/native'
 
+import { MediaQuery } from "react-native-responsive";
+
 const Button = () => {
+
+    console.log(Dimensions.get('window').width);
+    console.log(Dimensions.get('window').height);
+
     return (
         <TextView>
             <TextButton>
@@ -17,21 +23,24 @@ const Button = () => {
                 Click me on No Color!!!!
             </ModifiedButton>
 
-            <TouchableOpacityButton>
-                <Text>
-                    TouchableOpacity!!!
-                </Text>
-            </TouchableOpacityButton>
+            <MediaQuery minDeviceWidth={360} maxDeviceHeight={640}>
+                <TouchableOpacityButton>
+                    <Text>
+                        TouchableOpacity!!!
+                    </Text>
+                </TouchableOpacityButton>
+            </MediaQuery>
         </TextView>
     )
 }
 
 const TouchableOpacityButton = styled.TouchableOpacity`
-        display: none;
+        background-color: cyan;
     `
 
 const TextView = styled.View`
         background-color: gray;
+        width: 100%;       
     `
 
 const TextButton = styled.Text`
