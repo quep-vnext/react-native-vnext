@@ -1,12 +1,13 @@
 import React, {Component} from 'react'
 import {View, Text} from 'react-native'
+import firebase from 'firebase/app'
 import {Header} from './components'
-
-import firebase from 'firebase'
+import {LoginForm} from './component/LoginForm'
 
 class App extends Component {
 
 	componentWillMount() {
+		console.log('FireBase')
 		firebase.initializeApp({
 			apiKey: "AIzaSyD0qrO9sx5fJOQpoT0kYG7vLNHgXnh9Ik4",
 			authDomain: "v-gadern.firebaseapp.com",
@@ -19,7 +20,8 @@ class App extends Component {
 	render() {
 		return (
 			<View>
-				<Header textHeader="Authentication" />
+				<Header textHeader="Authentications" />
+				<LoginForm />
 			</View>
 		)
 	}
