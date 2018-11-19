@@ -4,7 +4,8 @@ import {ButtonClick, Card, CardSection, Input} from '../components'
 
 class LoginForm extends Component {
     state = {
-        email: ''
+        email: '',
+        password: ''
     }
 
     render() {
@@ -21,13 +22,23 @@ class LoginForm extends Component {
                 </CardSection>
 
                 <CardSection>
+                    <Input
+                        secureTextEntry={true}
+                        placeholder="Password Input here!!"
+                        label="Password"
+                        onChangeText={password => this.setState({password})}
+                        value={this.state.password}
+                    />
+                </CardSection>
+
+                <CardSection>
                     {/*<Button*/}
-                        {/*icon={{*/}
-                            {/*name: 'arrow-right',*/}
-                            {/*size: 15,*/}
-                            {/*color: 'white'*/}
-                        {/*}}*/}
-                        {/*title='Login'*/}
+                    {/*icon={{*/}
+                    {/*name: 'arrow-right',*/}
+                    {/*size: 15,*/}
+                    {/*color: 'white'*/}
+                    {/*}}*/}
+                    {/*title='Login'*/}
                     {/*/>*/}
                 </CardSection>
             </Card>
