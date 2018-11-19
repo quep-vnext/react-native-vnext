@@ -1,15 +1,30 @@
-import React, {Component} from 'react'
-import {View, Button, Text, TextInput} from 'react-native'
-import {ButtonClick, Card, CardSection, Input} from '../components'
+import React, {Component} from "react";
+import firebase from 'firebase'
+import {View, Button, Text, TextInput} from "react-native";
+import {ButtonClick, Card, CardSection, Input} from "../components";
 
 class LoginForm extends Component {
     state = {
-        email: '',
-        password: ''
+        email: "",
+        password: "",
+        error: ""
+    };
+
+    onPressClickButton() {
+        console.log("On press Button");
+        firebase
+            .auth()
+            .signInWithEmailAndPassword(email, password)
+            .catch(() => {
+                firebase.auth().createUserWithEmailAndPassword(email, password)
+                    .catch(() => {
+                         this.setState({error: 'Authentication Failed'})
+                    })
+            });
     }
 
     render() {
-        console.log('Login Form');
+        console.log("Login Form");
         return (
             <Card>
                 <CardSection>
@@ -31,18 +46,23 @@ class LoginForm extends Component {
                     />
                 </CardSection>
 
+                <Text style={{color: 'red'}}>
+                    {this.state.error}
+                </Text>
+
                 <CardSection>
-                    {/*<Button*/}
-                    {/*icon={{*/}
-                    {/*name: 'arrow-right',*/}
-                    {/*size: 15,*/}
-                    {/*color: 'white'*/}
-                    {/*}}*/}
-                    {/*title='Login'*/}
-                    {/*/>*/}
+                    <Button
+                        icon={{
+                            name: "arrow-right",
+                            size: 15,
+                            color: "white"
+                        }}
+                        title="Login"
+                        onPress={this.onPressClickButton}
+                    />
                 </CardSection>
             </Card>
-        )
+        );
     }
 }
 
