@@ -12,3 +12,5 @@ Checkout with rebase
 6
 
 Checkout with master
+Checkout with master
+Checkout with master
