@@ -10,3 +10,5 @@ Checkout with rebase
 4
 5
 6
+
+Checkout with master
