@@ -14,3 +14,7 @@ Checkout with rebase
 Checkout with master
 Checkout with master
 Checkout with master
+Checkout with master
+Checkout with master
+Checkout with master
+Checkout with master
