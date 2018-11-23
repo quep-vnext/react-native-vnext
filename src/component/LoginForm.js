@@ -1,5 +1,6 @@
 import React, {Component} from "react";
-import firebase from 'firebase'
+import firebase from '@firebase/app'
+import '@firebase/auth'
 import {View, Button, Text, TextInput} from "react-native";
 import {ButtonClick, Card, CardSection, Input} from "../components";
 
@@ -11,7 +12,9 @@ class LoginForm extends Component {
     };
 
     onPressClickButton() {
-        console.log("On press Button");
+        const {email, password} = this.state
+        console.log(email + '/' + password);
+        console.log('On key press!!');
         firebase
             .auth()
             .signInWithEmailAndPassword(email, password)
@@ -24,7 +27,6 @@ class LoginForm extends Component {
     }
 
     render() {
-        console.log("Login Form");
         return (
             <Card>
                 <CardSection>
@@ -58,7 +60,7 @@ class LoginForm extends Component {
                             color: "white"
                         }}
                         title="Login"
-                        onPress={this.onPressClickButton}
+                        onPress={this.onPressClickButton.bind(this)}
                     />
                 </CardSection>
             </Card>
