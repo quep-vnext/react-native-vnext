@@ -55,6 +55,7 @@ class LoginForm extends Component {
         this.setState({error: 'Authentication Failed', loading: false})
     }
 
+
     render() {
         return (
             <Card>
