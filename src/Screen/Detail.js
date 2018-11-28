@@ -12,6 +12,15 @@ export default class Detail extends Component{
                     title="Go to Details... again"
                     onPress={() => this.props.navigation.push('DetailScreen')}
                 />
+                <Button
+                    color="red"
+                    title="Go to Home Screen"
+                    onPress={() => this.props.navigation.navigate('HomeScreen')}
+                />
+                <Button
+                    title="Go back"
+                    onPress={() => this.props.navigation.goBack()}
+                />
             </View>
         )
     }
