@@ -6,6 +6,19 @@ import {Header} from './components'
 import {LoginForm} from './component/LoginForm'
 import {Spinner} from "./component/Spin";
 
+import { HomeStack } from './Route'
+// import { HomeStack } from "./Route";
+
+export default class App extends Component {
+	render() {
+		return(
+			<HomeStack />
+		)
+	}
+}
+
+
+/**
 class App extends Component {
 
 	state = {
@@ -60,4 +73,6 @@ class App extends Component {
 	}
 }
 
-export default App
+ **/
+
+// export default App
