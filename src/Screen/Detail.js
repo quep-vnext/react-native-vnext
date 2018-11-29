@@ -11,16 +11,7 @@ export default class Detail extends Component{
         }
         return {
             title: navigation.getParam('otherParam', 'Details'),
-            headerStyle: {
-                backgroundColor: 'red',
-            },
-            headerTitleStyle: {
-                color: "white",
-                textAlign:"center",
-                flex:1
-            },
             headerRight: (<View />),
-            headerLeft: <HeaderBackButton tintColor={'white'} onPress={() => goBack() }/>
         }
     }
 
