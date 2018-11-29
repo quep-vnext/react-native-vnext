@@ -1,13 +1,24 @@
 import React, { Component } from 'react'
-import {View, Text, TouchableOpacity, Button} from 'react-native'
+import {View, Text, TouchableOpacity, Button, TouchableOpacity} from 'react-native'
 import {StackActions, NavigationActions, HeaderBackButton} from 'react-navigation'
 
 import {LogoTitle} from "../components/LogoTitle";
 
 export default class Home extends Component{
+
     static navigationOptions= {
-        headerTitle: <LogoTitle/>
-    }
+        headerTitle: <LogoTitle/>,
+        headerLeft: <View />,
+        headerRight: (
+            <View>
+                <TouchableOpacity>
+                    Info
+                </TouchableOpacity>
+            </View>
+        ),
+    };
+
+
 
     render() {
         return(
@@ -26,5 +37,10 @@ export default class Home extends Component{
                 />
             </View>
         )
+    }
+}
+const styles = {
+    buttonTitle: {
+        color: "red"
     }
 }
