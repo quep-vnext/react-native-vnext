@@ -2,7 +2,17 @@ import React, { Component } from 'react'
 import {View, Text, TouchableOpacity, Button} from 'react-native'
 import {StackActions, NavigationActions} from 'react-navigation'
 
+import {LogoTitle} from "../components/LogoTitle";
+
 export default class Home extends Component{
+    static navigationOptions= {
+        title: "Home",
+        headerTitleStyle: {
+            textAlign:"center",
+            flex:1
+        },
+    }
+
     render() {
         return(
             <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
@@ -10,7 +20,13 @@ export default class Home extends Component{
 
                 <Button
                     title="Go to Details"
-                    onPress={() => this.props.navigation.navigate('DetailScreen')}
+                    onPress={() => {
+                        /* 1. Navigate to the Details route with params */
+                        this.props.navigation.navigate('DetailScreen', {
+                            itemId: 86,
+                            otherParam: 'anything you want here',
+                        });
+                    }}
                 />
             </View>
         )

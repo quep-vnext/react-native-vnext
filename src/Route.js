@@ -5,6 +5,7 @@ import HomeScreen from './Screen/Home'
 import UserScreen from './Screen/User'
 import DetailScreen from './Screen/Detail'
 import MenuScreen from './Screen/Menu'
+import {LogoTitle} from './components/LogoTitle'
 
 import {createStackNavigator, createAppContainer} from "react-navigation";
 
