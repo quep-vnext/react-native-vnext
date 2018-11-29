@@ -28,7 +28,7 @@ export default class Home extends Component{
                         /* 1. Navigate to the Details route with params */
                         this.props.navigation.navigate('DetailScreen', {
                             itemId: 86,
-                            otherParam: 'anything you want here',
+                            otherParam: 'Detail',
                         });
                     }}
                 />

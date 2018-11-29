@@ -10,7 +10,7 @@ export default class Detail extends Component{
             goBack = navigation.state.params.onGoBack;
         }
         return {
-            title: "Details",
+            title: navigation.getParam('otherParam', 'Details'),
             headerStyle: {
                 backgroundColor: 'red',
             },
@@ -45,6 +45,11 @@ export default class Detail extends Component{
                         this.props.navigation.push('DetailScreen', {
                             itemId: Math.floor(Math.random() * 100),
                         })}
+                />
+                <Button
+                    title="Update the title"
+                    onPress={() =>
+                        this.props.navigation.setParams({ otherParam: 'Updated!' })}
                 />
                 <Button
                     title="Go to Home"
