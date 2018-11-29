@@ -1,13 +1,17 @@
 import React, { Component } from 'react'
 import {View, Text, TouchableOpacity, Button} from 'react-native'
-import {StackActions, NavigationActions} from 'react-navigation'
+import {StackActions, NavigationActions, HeaderBackButton} from 'react-navigation'
 
 import {LogoTitle} from "../components/LogoTitle";
 
 export default class Home extends Component{
     static navigationOptions= {
         title: "Home",
+        headerStyle: {
+            backgroundColor: 'red',
+        },
         headerTitleStyle: {
+            color: "white",
             textAlign:"center",
             flex:1
         },

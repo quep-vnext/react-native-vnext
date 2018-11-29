@@ -1,15 +1,27 @@
 
 import React, { Component } from 'react'
 import {View, Text, Button} from 'react-native'
+import {HeaderBackButton} from "react-navigation";
 
 export default class Detail extends Component{
-    static navigationOptions= {
-        title: "Details",
-        headerTitleStyle: {
-            textAlign:"center",
-            flex:1
-        },
-        headerRight: (<View />)
+    static navigationOptions = ({ navigation }) => {
+        let goBack = navigation.goBack;
+        if (navigation.state.params.onGoBack) {
+            goBack = navigation.state.params.onGoBack;
+        }
+        return {
+            title: "Details",
+            headerStyle: {
+                backgroundColor: 'red',
+            },
+            headerTitleStyle: {
+                color: "white",
+                textAlign:"center",
+                flex:1
+            },
+            headerRight: (<View />),
+            headerLeft: <HeaderBackButton tintColor={'white'} onPress={() => goBack() }/>
+        }
     }
 
     render() {
