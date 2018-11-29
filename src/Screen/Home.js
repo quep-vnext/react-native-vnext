@@ -1,8 +1,11 @@
 import React, { Component } from 'react'
-import {View, Text, TouchableOpacity, Button, TouchableOpacity} from 'react-native'
+import {View, Text, TouchableOpacity, Button} from 'react-native'
 import {StackActions, NavigationActions, HeaderBackButton} from 'react-navigation'
 
 import {LogoTitle} from "../components/LogoTitle";
+
+import Swipeout from 'react-native-swipeout';
+import {AppConfig} from './../global'
 
 export default class Home extends Component{
 
@@ -11,9 +14,7 @@ export default class Home extends Component{
         headerLeft: <View />,
         headerRight: (
             <View>
-                <TouchableOpacity>
-                    Info
-                </TouchableOpacity>
+                <Button title="Info" onPress={() => console.log("Click Info")} />
             </View>
         ),
     };
@@ -21,10 +22,16 @@ export default class Home extends Component{
 
 
     render() {
+        // Buttons
+        let swipeoutBtns = [
+            {
+                text: '削除'
+            }
+        ]
+
         return(
             <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
                 <Text>Home</Text>
-
                 <Button
                     title="Go to Details"
                     onPress={() => {
@@ -35,6 +42,21 @@ export default class Home extends Component{
                         });
                     }}
                 />
+
+                <View style={styles.containerView}>
+                    <Swipeout right={swipeoutBtns}>
+                        <View style={styles.swipeoutView}>
+                            <Text  style={styles.textView}>Swipe me left</Text>
+                        </View>
+                    </Swipeout>
+                </View>
+                <View style={styles.containerView}>
+                    <Swipeout right={swipeoutBtns}>
+                        <View style={styles.swipeoutView}>
+                            <Text style={styles.textView}>Swipe me left</Text>
+                        </View>
+                    </Swipeout>
+                </View>
             </View>
         )
     }
@@ -42,5 +64,22 @@ export default class Home extends Component{
 const styles = {
     buttonTitle: {
         color: "red"
+    },
+    containerView: {
+        width: '100%',
+        paddingLeft: 5,
+        paddingRight: 5,
+        borderTop: 1,
+        borderBottom: 1,
+    },
+    swipeoutView: {
+        height: 60,
+        borderWidth: 1,
+        borderColor: '#13354e',
+    },
+    textView: {
+        paddingLeft: 10,
+        paddingRight: 10
     }
+
 }
