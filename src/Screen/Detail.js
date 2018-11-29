@@ -20,7 +20,8 @@ export default class Detail extends Component{
                 flex:1
             },
             headerRight: (<View />),
-            headerLeft: <HeaderBackButton tintColor={'white'} onPress={() => goBack() }/>
+            // headerLeft: <HeaderBackButton tintColor={'white'} onPress={() => goBack() }/>,
+            headerTintColor: '#cccccc',
         }
     }
 
