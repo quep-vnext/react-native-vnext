@@ -7,14 +7,6 @@ import {LogoTitle} from "../components/LogoTitle";
 export default class Home extends Component{
     static navigationOptions= {
         title: "Home",
-        headerStyle: {
-            backgroundColor: 'red',
-        },
-        headerTitleStyle: {
-            color: "white",
-            textAlign:"center",
-            flex:1
-        },
     }
 
     render() {
