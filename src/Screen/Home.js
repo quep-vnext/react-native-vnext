@@ -6,7 +6,7 @@ import {LogoTitle} from "../components/LogoTitle";
 
 export default class Home extends Component{
     static navigationOptions= {
-        title: "Home",
+        headerTitle: <LogoTitle/>
     }
 
     render() {
