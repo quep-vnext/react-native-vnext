@@ -6,6 +6,7 @@ import {LogoTitle} from "../components/LogoTitle";
 
 import Swipeout from 'react-native-swipeout';
 import {AppConfig} from './../global'
+import {DeleteIcon} from "../component/DeleteIcon";
 
 export default class Home extends Component{
 
@@ -25,7 +26,10 @@ export default class Home extends Component{
         // Buttons
         let swipeoutBtns = [
             {
-                text: '削除'
+                component: <DeleteIcon />,
+                onPress: () => {
+                    console.log('Click ')
+                }
             }
         ]
 
