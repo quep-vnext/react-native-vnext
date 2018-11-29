@@ -26,6 +26,18 @@ const AppNavigator = createStackNavigator(
     },
     {
         initialRouteName: 'HomeScreen',
+        defaultNavigationOptions: {
+            headerStyle: {
+                backgroundColor: 'red',
+            },
+            headerTitleStyle: {
+                color: "white",
+                textAlign:"center",
+                flex:1
+            },
+            // headerLeft: <HeaderBackButton tintColor={'white'} onPress={() => goBack() }/>,
+            headerTintColor: 'white',
+        },
     }
 );
 
