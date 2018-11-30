@@ -2,11 +2,11 @@ import React from 'react'
 import {View, Text, Image, Platform} from 'react-native'
 import Icon from "react-native-vector-icons/FontAwesome";
 
-const DeleteIcon = () => {
+const EditIcon = () => {
     return (
         <View style={styles.styleView}>
             <Icon
-                name={Platform.OS === "ios" ? "trash-o" : "trash-o"}
+                name={Platform.OS === "ios" ? "pencil-square-o" : "pencil-square-o"}
                 color="red"
                 size={25}
             />
@@ -14,13 +14,12 @@ const DeleteIcon = () => {
     )
 }
 
-export {DeleteIcon}
+export {EditIcon}
 
 const styles = {
     styleView: {
         flex: 1,
         justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: 'transparent'
+        alignItems: 'center'
     }
 }

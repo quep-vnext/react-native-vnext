@@ -6,7 +6,10 @@ import {LogoTitle} from "../components/LogoTitle";
 
 import Swipeout from 'react-native-swipeout';
 import {AppConfig} from './../global'
+
+//Import Component
 import {DeleteIcon} from "../component/DeleteIcon";
+import {EditIcon} from "../component/EditIcon";
 
 export default class Home extends Component{
 
@@ -29,7 +32,15 @@ export default class Home extends Component{
                 component: <DeleteIcon />,
                 onPress: () => {
                     console.log('Click ')
-                }
+                },
+                backgroundColor: 'blue'
+            },
+            {
+                component: <EditIcon />,
+                onPress: () => {
+                    console.log('Click ')
+                },
+                backgroundColor: 'green'
             }
         ]
 
