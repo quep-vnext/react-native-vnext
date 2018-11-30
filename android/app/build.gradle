@@ -95,7 +95,6 @@ def enableProguardInReleaseBuilds = false
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
 
     defaultConfig {
         applicationId "com.v_gadern"
@@ -134,6 +133,7 @@ android {
             }
         }
     }
+    buildToolsVersion '28.0.2'
 }
 
 dependencies {
