@@ -41,4 +41,5 @@ const AppNavigator = createStackNavigator(
     }
 );
 
-export const HomeStack = createAppContainer(AppNavigator);
+const HomeStack = createAppContainer(AppNavigator);
+export {HomeStack}
