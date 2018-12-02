@@ -9,8 +9,10 @@ import {Spinner} from "./component/Spin";
 import { HomeStack } from './Route'
 // import { HomeStack } from "./Route";
 
+
 export default class App extends Component {
 	render() {
+		console.log('Dien tu vien thong');
 		return(
 			<HomeStack />
 		)
