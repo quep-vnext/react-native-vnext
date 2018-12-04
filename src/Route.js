@@ -7,9 +7,16 @@ import DetailScreen from './Screen/Detail'
 import MenuScreen from './Screen/Menu'
 import {LogoTitle} from './components/LogoTitle'
 
-import {createStackNavigator, createAppContainer} from "react-navigation";
+import {createStackNavigator, createAppContainer, createBottomTabNavigator } from "react-navigation";
+import {HomeTab} from "./Tab/HomeTab";
+import {SettingTab} from "./Tab/SettingTab";
 
-const AppNavigator = createStackNavigator(
+const TabNavigator = createBottomTabNavigator({
+    Home: { screen: HomeTab },
+    Settings: { screen: SettingTab },
+});
+
+/*const AppNavigator = createStackNavigator(
     {
         HomeScreen: {
             screen: HomeScreen
@@ -39,7 +46,7 @@ const AppNavigator = createStackNavigator(
             headerTintColor: 'white',
         },
     }
-);
+);*/
 
-const HomeStack = createAppContainer(AppNavigator);
+const HomeStack = createAppContainer(TabNavigator);
 export {HomeStack}
