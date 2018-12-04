@@ -7,14 +7,13 @@ import {LoginForm} from './component/LoginForm'
 import {Spinner} from "./component/Spin";
 
 import { HomeStack } from './Route'
-// import { HomeStack } from "./Route";
 
 
 export default class App extends Component {
 	render() {
-		console.log('Dien tu vien thong');
+		console.log('!!!!');
 		return(
-			<HomeStack />
+			<HomeStack onNavigationStateChange={console.log('Navigation on Change')} uriPrefix="/app" />
 		)
 	}
 }
